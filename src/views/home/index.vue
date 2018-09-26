@@ -60,7 +60,7 @@
     </div>
     <div style="position: absolute;width: 100%;top: 50px;left: 0;right: 0;bottom: 0;background-color: #e5e7ea">
       <div class="viewsFrame">
-
+        <router-view/>
       </div>
       <div :class="leftFrame">
 
@@ -83,8 +83,6 @@
       </div>
 
     </div>
-
-    <router-view/>
   </div>
 </template>
 
