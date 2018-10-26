@@ -17,9 +17,7 @@
     top: 0;
     bottom: 0;
     border-right:3px solid #A2A2A2;
-    width: 12%;
-    min-width: 150px;
-    max-width: 300px;
+    width: 160px;
     color: #444444;
     background: #CDCDCD;
   }
@@ -42,14 +40,13 @@
   }
   .viewsFrame{
     position: absolute;
-    left: 12.6%;
+    left: 165px;
     right: 5px;
     top: 10px;
     bottom: 10px;
     background-color: #FFFFFF;
     border-radius: 10px;
   }
-
 
 </style>
 <template>
@@ -63,10 +60,10 @@
         <router-view/>
       </div>
       <div :class="leftFrame">
-
-        <div v-for="(item,index) in menuData" :class="selectMenuDivColor(item.id)" @click="navigator(item,index)">
+        <div v-for="(item,index) in menuData" :class="selectMenuDivColor(item.id)" @click="navigator(item,index)" :style='{height:"oneMenuHeight"}'>
           <span>{{item.name}}</span>
         </div>
+
 
         <!--<el-menu-->
           <!--class="el-menu-vertical-demo"-->
@@ -98,6 +95,9 @@
               topFrame2:"topFrame2",
               leftFrame:"leftFrame",
               menuColor:"menuColor",
+
+              oneMenuHeight:40,
+              minHeight:100,
 
               menuData:[],
               itemData:{
