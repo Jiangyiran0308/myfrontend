@@ -38,7 +38,9 @@
         <div>
           <span>{{item.data}}</span>
         </div>
-          <span class="Jiconfont el-icon-taobao-communityfill"></span>
+        <div>
+          <span class="Jiconfont ji-iconfont-community_light" style="font-size: 25px"></span>
+        </div>
       </div>
       <div style="margin-top: 32px;margin-bottom: 32px;text-align: center;">
         <el-pagination
