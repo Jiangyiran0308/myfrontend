@@ -4,7 +4,7 @@
     border-radius: 15px;
     padding: 16px;
     margin: 30px;
-    height: 250px;
+    height: 120px;
     min-width: 700px;
     box-shadow:5px 5px  10px 2px #C7C7C7;
   }
@@ -35,11 +35,13 @@
         <span>发表日期：{{format(item.date,"yyyy-MM-dd hh:mm")}}</span>
         <span style="margin-left: 50px">作者：{{item.author}}</span><br/>
         <span v-for="item1 in item.tag">{{item1}},</span><br/>
-        <div>
+        <div style="height:35px">
           <span>{{item.data}}</span>
         </div>
         <div>
-          <span class="Jiconfont ji-iconfont-community_light" style="font-size: 25px"></span>
+          <span class="Jiconfont ji-iconfont-favor_light" style="font-size: 25px ; float: right"></span>
+          <span class="Jiconfont ji-iconfont-appreciate_light" style="font-size: 25px ; float: right;margin-right: 10px;"></span>
+          <span class="Jiconfont ji-iconfont-comment_light" style="font-size: 25px ; float: right;margin-right: 10px"></span>
         </div>
       </div>
       <div style="margin-top: 32px;margin-bottom: 32px;text-align: center;">
@@ -59,7 +61,6 @@
 
 <script>
   import 'element-ui'
-  import '../assets/icon/iconfont.css'
 
     export default {
         name: "user-home",

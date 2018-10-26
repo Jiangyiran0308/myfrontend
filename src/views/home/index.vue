@@ -53,7 +53,9 @@
   <div id = "app">
 
     <div :class="topFrame">
-      <span>NAME</span>
+      <div style="margin-top: 5px;margin-bottom: 5px;margin-left: 65px">
+        <span class="ji-iconfont-home_fill_light" style="font-size: 35px;color: #FFFFFF" ></span>
+      </div>
     </div>
     <div style="position: absolute;width: 100%;top: 50px;left: 0;right: 0;bottom: 0;background-color: #e5e7ea">
       <div class="viewsFrame">
@@ -63,8 +65,6 @@
         <div v-for="(item,index) in menuData" :class="selectMenuDivColor(item.id)" @click="navigator(item,index)" :style='{height:"oneMenuHeight"}'>
           <span>{{item.name}}</span>
         </div>
-
-
         <!--<el-menu-->
           <!--class="el-menu-vertical-demo"-->
           <!--background-color="#CDCDCD"-->
@@ -107,7 +107,6 @@
                 itemClass:''
               },
               nowMenu: "/",
-
 
             }
         },
