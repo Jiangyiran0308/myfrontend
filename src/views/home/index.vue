@@ -17,7 +17,7 @@
     top: 0;
     bottom: 0;
     border-right:3px solid #A2A2A2;
-    width: 12%;
+    width: 160px;
     min-width: 150px;
     max-width: 300px;
     color: #444444;
@@ -42,7 +42,7 @@
   }
   .viewsFrame{
     position: absolute;
-    left: 12.6%;
+    left: 170px;
     right: 5px;
     top: 10px;
     bottom: 10px;
