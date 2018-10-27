@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Index from '../views/menu/index'
+import SecondMenu from '../views/menu/SecondMenu'
 import UserHome from '../components/UserHome'
 
 Vue.use(Router)
@@ -14,14 +15,18 @@ export default new Router({
     {
       path:'/my.j.blog',
       name:'userhome',
-      component:UserHome,
+      component:  Index,
       children:[
+        {
+          path: '',
+          redirect: '/my.j.blog/home'
+        },
         {
           path:'home',
           name:'userhome',
           component:UserHome,
         }
       ]
-    }
+    },
   ]
 })
