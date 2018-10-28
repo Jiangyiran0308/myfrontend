@@ -1,24 +1,30 @@
 {
-  "name":"menu",
   "entity": null,
   "child":[
     {
-      "id":1,
-      "parentMenuId":0,
-      "name":"首页",
-      "iconClass":"ji-iconfont-home_fill_light",
-      "iconSize":"22px",
-      "itemClass":"menuColor",
-      "value":""
+      "entity":{
+        "id":1,
+        "parentMenuId":0,
+        "name":"首页",
+        "iconClass":"ji-iconfont-home_fill_light",
+        "iconSize":"22px",
+        "itemClass":"menuColor",
+        "value":""
+      },
+      "child":[]
+
     },
     {
-      "id":2,
-      "parentMenuId":0,
-      "name":"关注",
-      "iconClass":"ji-iconfont-likefill",
-      "iconSize":"22px",
-      "itemClass":"menuColor",
-      "value":""
+      "entity": {
+        "id": 2,
+        "parentMenuId": 0,
+        "name": "关注",
+        "iconClass": "ji-iconfont-likefill",
+        "iconSize": "22px",
+        "itemClass": "menuColor",
+        "value": ""
+      },
+      "child":[]
     }
   ]
 }

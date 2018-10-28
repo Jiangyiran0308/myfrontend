@@ -1,4 +1,4 @@
-<style>
+<style scoped>
   .essay_frame{
     border: 1px solid #9F9F9F;
     border-radius: 15px;
@@ -8,28 +8,9 @@
     min-width: 700px;
     box-shadow:5px 5px  10px 2px #C7C7C7;
   }
-
-  /*分页样式修改*/
-  .el-pagination.is-background .el-pager li:not(.disabled).active {
-    background-color: #A8A8A8;
-    color: #fff;
-  }
-  .el-pagination.is-background .el-pager li:not(.disabled):hover {
-    color: #B1B1B1;
-  }
-  .el-select .el-input.is-focus .el-input__inner {
-    border-color: #484848;
-  }
-  .el-pagination__sizes .el-input .el-input__inner:hover {
-    border-color: #484848;
-  }
-  .el-select-dropdown__item.selected {
-    color: #9D9D9D;
-    font-weight: 700;
-  }
 </style>
 <template>
-    <div  style="height: 95%; overflow:auto;margin-top: 5px;margin-bottom: 5px">
+    <div  style="height: 98%;margin-top: 5px;margin-bottom: 5px">
       <div v-for="item in essaydata" class="essay_frame">
         <span>{{item.title}}</span><br/>
         <span>发表日期：{{format(item.date,"yyyy-MM-dd hh:mm")}}</span>
