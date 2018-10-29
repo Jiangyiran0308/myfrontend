@@ -54,8 +54,9 @@
 <template>
   <div id = "app">
     <div :class="topFrame">
-      <div style="float: left;width: 170px;">
-        <span class="ji-iconfont-home_fill_light" style="font-size: 35px;color: #FFFFFF" ></span>
+      <div style="float: left;width: 170px;text-align:center">
+        <!--<span class="ji-iconfont-home_fill_light" style="font-size: 35px;color: #FFFFFF" ></span>-->
+        <img :src="logoUrl"/>
       </div>
       <!--二级，三级++菜单-->
       <div style="float: left">
@@ -88,6 +89,7 @@
 <script>
   import 'element-ui'
   import SecondMenu from './SecondMenu'
+  import img_logo from '../../../static/logo.png'
 
     export default {
         name: "index",
@@ -106,6 +108,8 @@
               oneMenuHeight:40,
               minHeight:100,
 
+              logoUrl:'',
+
               menuData:[],
               nowMenu: '',
 
@@ -121,6 +125,7 @@
         },
         mounted() {
           let vm = this ;
+          vm.logoUrl = img_logo;
           vm.loadItem() ;
         },
         methods: {
