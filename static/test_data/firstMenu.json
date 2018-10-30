@@ -25,6 +25,79 @@
         "value": ""
       },
       "child":[]
+    },
+    {
+      "entity": {
+        "id": 3,
+        "parentMenuId": 0,
+        "name": "我的文章",
+        "iconClass": "ji-iconfont-formfill",
+        "iconSize": "22px",
+        "itemClass": "menuColor",
+        "value": ""
+      },
+      "child":[]
+    },
+    {
+      "entity": {
+        "id": 4,
+        "parentMenuId": 0,
+        "name": "发表文章",
+        "iconClass": "ji-iconfont-writefill",
+        "iconSize": "22px",
+        "itemClass": "menuColor",
+        "value": ""
+      },
+      "child":[]
+    },
+    {
+      "entity": {
+        "id": 5,
+        "parentMenuId": 0,
+        "name": "草稿箱",
+        "iconClass": "ji-iconfont-deletefill",
+        "iconSize": "22px",
+        "itemClass": "menuColor",
+        "value": ""
+      },
+      "child":[]
+    },
+    {
+      "entity": {
+        "id": 6,
+        "parentMenuId": 0,
+        "name": "留言板",
+        "iconClass": "ji-iconfont-message_fill_light",
+        "iconSize": "22px",
+        "itemClass": "menuColor",
+        "value": ""
+      },
+      "child":[]
+    },
+    {
+      "entity": {
+        "id": 7,
+        "parentMenuId": 0,
+        "name": "新消息",
+        "iconClass": "ji-iconfont-noticefill",
+        "iconSize": "22px",
+        "itemClass": "menuColor",
+        "value": ""
+      },
+      "child":[]
+    },
+    {
+      "entity": {
+        "id": 8,
+        "parentMenuId": 0,
+        "name": "账户设置",
+        "iconClass": "ji-iconfont-repairfill",
+        "iconSize": "22px",
+        "itemClass": "menuColor",
+        "value": ""
+      },
+      "child":[]
     }
+
   ]
 }

@@ -22,21 +22,23 @@
     background: #CDCDCD;
   }
   .menuColor{
-    height: 60px;
+    height: 50px;
     line-height: 60px;
     color: #444444;
     background-color: #CDCDCD;
-    text-align: center;
+    padding-left: 18px;
+    /*text-align: center;*/
   }
   .menuColor:hover{
     background-color: #B6B6B6;
   }
   .clickmenuColor{
-    height: 60px;
+    height: 50px;
     line-height: 60px;
     color: #FFFFFF;
     background-color: #A2A2A2;
-    text-align: center;
+    padding-left: 18px;
+    /*text-align: center;*/
   }
   .viewsFrame{
     position: absolute;
@@ -68,6 +70,9 @@
           <second-menu :menuData="secondMenuData"/>
         </el-menu>
       </div>
+      <div style="float: right">
+        <user-info/>
+      </div>
     </div>
     <div style="position: absolute;width: 100%;top: 50px;left: 0;right: 0;bottom: 0;background-color: #e5e7ea">
       <div class="viewsFrame">
@@ -77,8 +82,8 @@
       </div>
       <div :class="leftFrame">
         <div v-for="(item,index) in menuData" :class="selectMenuDivColor(item.entity.id)" @click="clickMenu(item.entity,index)" :style='{height:"oneMenuHeight"}'>
-          <span :class="item.entity.iconClass" style="font-size: 25px"></span>&nbsp&nbsp
-          <span style="font-size: 20px">{{item.entity.name}}</span>
+          <span :class="item.entity.iconClass" style="font-size: 20px"></span>&nbsp&nbsp
+          <span style="font-size: 15px">{{item.entity.name}}</span>
         </div>
       </div>
 
@@ -90,13 +95,15 @@
   import 'element-ui'
   import SecondMenu from './SecondMenu'
   import img_logo from '../../../static/logo.png'
+  import UserInfo from '../userInfo/UserInfo'
 
     export default {
         name: "index",
         props: {},
         components: {
-          SecondMenu,
-          'second-menu': SecondMenu
+          UserInfo,
+          'second-menu': SecondMenu,
+          'user-info': UserInfo
         },
         data() {
             return {
