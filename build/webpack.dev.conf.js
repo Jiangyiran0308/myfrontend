@@ -18,6 +18,7 @@ const express = require('express')
 const app = express()
 var appData = require('../static/test_data/firstMenu.json')
 var secondMenu = require('../static/test_data/secondMenu.json')
+var userInfo = require('../static/test_data/UserInfo.json')
 var apiRoutes = express.Router()
 app.use('/api', apiRoutes)
 //**************
@@ -64,6 +65,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         res.json({
           errno: 0,
           data: secondMenu
+        })
+      })
+      app.get('/api/userInfo', (req, res) => {
+        res.json({
+          errno: 0,
+          data: userInfo
         })
       })
     }
