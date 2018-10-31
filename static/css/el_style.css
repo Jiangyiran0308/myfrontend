@@ -68,3 +68,13 @@
 /*-ms-transform: rotate(0deg);*/
 /*transform: rotateZ(0deg);*/
 /*}*/
+
+/*下拉菜单*/
+.el-dropdown-menu__item:focus, .el-dropdown-menu__item:not(.is-disabled):hover {
+  background-color: #D1D1D1;
+  color: #444444;
+}
+/*搜索选择菜单*/
+.el-select .el-input {
+  width: 100px;
+}

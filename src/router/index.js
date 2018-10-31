@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '../views/menu/index'
-import UserHome from '../components/UserHome'
+import UserHome from '../components/HotTag'
 
 Vue.use(Router)
 
