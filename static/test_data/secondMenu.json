@@ -2,22 +2,118 @@
   "entity": null,
   "child":[
     {
-      "id":1,
-      "parentMenuId":0,
-      "name":"首页",
-      "iconClass":"ji-iconfont-home_fill_light",
-      "iconSize":"22px",
-      "itemClass":"menuColor",
-      "value":""
+      "entity":{
+        "id":"1",
+        "parentMenuId":"1",
+        "name":"menu1",
+        "iconClass":"",
+        "iconSize":"22px",
+        "itemClass":"menuColor",
+        "value":""
+      },
+      "child":[
+        {
+          "entity":{
+            "id":"1-1",
+            "parentMenuId":"1",
+            "name":"test1",
+            "iconClass":"",
+            "iconSize":"22px",
+            "itemClass":"menuColor",
+            "value":""
+          },
+          "child":[
+            {
+              "entity":{
+                "id":"1-1-1",
+                "parentMenuId":"1",
+                "name":"test1",
+                "iconClass":"",
+                "iconSize":"22px",
+                "itemClass":"menuColor",
+                "value":""
+              },
+              "child":[]
+
+            },
+            {
+              "entity": {
+                "id": "1-1-2",
+                "parentMenuId": "2",
+                "name": "test2",
+                "iconClass": "",
+                "iconSize": "22px",
+                "itemClass": "menuColor",
+                "value": ""
+              },
+              "child":[]
+            }
+          ]
+
+        },
+        {
+          "entity": {
+            "id": "1-2",
+            "parentMenuId": "2",
+            "name": "test2",
+            "iconClass": "",
+            "iconSize": "22px",
+            "itemClass": "menuColor",
+            "value": ""
+          },
+          "child":[
+            {
+              "entity":{
+                "id":"1-2-1",
+                "parentMenuId":"1",
+                "name":"test1",
+                "iconClass":"",
+                "iconSize":"22px",
+                "itemClass":"menuColor",
+                "value":""
+              },
+              "child":[]
+
+            },
+            {
+              "entity": {
+                "id": "1-2-2",
+                "parentMenuId": "2",
+                "name": "test2",
+                "iconClass": "",
+                "iconSize": "22px",
+                "itemClass": "menuColor",
+                "value": ""
+              },
+              "child":[]
+            }
+          ]
+        }
+      ]
     },
     {
-      "id":2,
-      "parentMenuId":0,
-      "name":"关注",
-      "iconClass":"ji-iconfont-likefill",
-      "iconSize":"22px",
-      "itemClass":"menuColor",
-      "value":""
+      "entity": {
+        "id": "2",
+        "parentMenuId": "1",
+        "name": "menu2",
+        "iconClass": "",
+        "iconSize": "22px",
+        "itemClass": "menuColor",
+        "value": ""
+      },
+      "child":[]
+    },
+    {
+      "entity": {
+        "id": "3",
+        "parentMenuId": "1",
+        "name": "menu3",
+        "iconClass": "",
+        "iconSize": "22px",
+        "itemClass": "menuColor",
+        "value": ""
+      },
+      "child":[]
     }
   ]
 }

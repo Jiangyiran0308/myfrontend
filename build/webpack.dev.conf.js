@@ -17,6 +17,7 @@ const PORT = process.env.PORT && Number(process.env.PORT)
 const express = require('express')
 const app = express()
 var appData = require('../static/test_data/firstMenu.json')
+var secondMenu = require('../static/test_data/secondMenu.json')
 var apiRoutes = express.Router()
 app.use('/api', apiRoutes)
 //**************
@@ -57,6 +58,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         res.json({
           errno: 0,
           data: appData
+        })
+      })
+      app.get('/api/secondMenu', (req, res) => {
+        res.json({
+          errno: 0,
+          data: secondMenu
         })
       })
     }
