@@ -19,8 +19,8 @@
         </el-input>
       </div>
       <!--热门-->
-      <div style="margin-top: 60px;margin-left: 30px;margin-right: 30px">
-        <span style="color: #630012;font-size: 20px;font-weight: bolder;font-family: 微软雅黑">
+      <div style="margin-top: 100px;margin-left: 30px;margin-right: 30px">
+        <span style="color: #8B0014;font-size: 20px;font-weight: bolder;font-family: 微软雅黑">
           热门
           <span class="ji-iconfont-hotfill" style="font-size: 25px"></span>
         </span>

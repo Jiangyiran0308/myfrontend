@@ -6,51 +6,48 @@
     top: 0;
     bottom: 0;
     width: 100%;
+    min-width: 1260px;
     height: 50px;
     color: #FFFFFF;
     background: #444444;
   }
   .leftFrame{
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    border-right:3px solid #A2A2A2;
-    width: 160px;
+    float: left;
+    height: 100%;
+    width: 140px;
     color: #444444;
     background: #CDCDCD;
   }
   .menuColor{
     height: 50px;
-    line-height: 60px;
+    line-height: 50px;
     color: #444444;
     background-color: #CDCDCD;
     padding-left: 18px;
-    /*text-align: center;*/
+    cursor:pointer;
   }
   .menuColor:hover{
     background-color: #B6B6B6;
   }
   .clickmenuColor{
+    cursor:pointer;
     height: 50px;
-    line-height: 60px;
+    line-height: 50px;
     color: #FFFFFF;
     background-color: #A2A2A2;
     padding-left: 18px;
-    /*text-align: center;*/
   }
   .viewsFrame{
-    position: absolute;
-    left: 165px;
-    right: 5px;
-    top: 10px;
-    bottom: 10px;
+    float: left;
+    margin-left: 10px;
+    width: 1000px;
+    height: 100%;
     background-color: #FFFFFF;
-    border-radius: 10px;
   }
-
-  .el-scrollbar .el-scrollbar__wrap {overflow-x: hidden;}
+  .secondMenuFrame{
+    float: left;
+    height: 50px;
+  }
 
 </style>
 <template>
@@ -61,7 +58,7 @@
         <img :src="logoUrl"/>
       </div>
       <!--二级，三级++菜单-->
-      <div style="float: left">
+      <div class="secondMenuFrame">
         <el-menu
           :default-active="activeIndex"
           background-color="#444444"
@@ -75,18 +72,27 @@
       </div>
     </div>
     <div style="position: absolute;width: 100%;top: 50px;left: 0;right: 0;bottom: 0;background-color: #e5e7ea">
-      <div class="viewsFrame">
-        <el-scrollbar style="height: 100%">
-          <router-view/>
-        </el-scrollbar>
-      </div>
-      <div :class="leftFrame">
-        <div v-for="(item,index) in menuData" :class="selectMenuDivColor(item.entity.id)" @click="clickMenu(item.entity,index)" :style='{height:"oneMenuHeight"}'>
-          <span :class="item.entity.iconClass" style="font-size: 20px"></span>&nbsp&nbsp
-          <span style="font-size: 15px">{{item.entity.name}}</span>
+      <div style="height: 100%;width: 1260px;margin: 0 auto">
+        <!--左侧一级菜单-->
+        <div :class="leftFrame">
+          <el-scrollbar style="height: 100%">
+            <div v-for="(item,index) in menuData" :class="selectMenuDivColor(item.entity.id)" @click="clickMenu(item.entity,index)" :style='{height:"oneMenuHeight"}'>
+              <span :class="item.entity.iconClass" style="font-size: 20px"></span>&nbsp&nbsp
+              <span style="font-size: 15px">{{item.entity.name}}</span>
+            </div>
+            <!--<div style="height: 30px;cursor:pointer;margin-bottom: 2px">click</div>-->
+          </el-scrollbar>
         </div>
-      </div>
+        <!--窗口-->
+        <div class="viewsFrame">
+          <el-scrollbar style="height: 100%">
+            <router-view/>
+          </el-scrollbar>
+        </div>
 
+        <!--<div style="float: left;margin-left: 10px;height: 300px;width: 140px"></div>-->
+
+      </div>
     </div>
   </div>
 </template>
@@ -112,8 +118,7 @@
               leftFrame:"leftFrame",
               menuColor:"menuColor",
 
-              oneMenuHeight:40,
-              minHeight:100,
+              menuShoeflag:true,
 
               logoUrl:'',
 
@@ -144,7 +149,7 @@
               let data = xhr.body.data ;
               if(data.child.length > 0){
                 vm.menuData = data.child;
-                vm.clickMenu(vm.menuData[0].entity,0)
+                vm.clickMenu(vm.menuData[0].entity,0);
               }
             })
           },
@@ -157,7 +162,7 @@
             vm.$router.push({path:url});
 
             let data = vm.menuData[index].child
-            console.log(data);
+            // console.log(data);
             vm.secondMenuData = data ;
           },
           selectMenuDivColor(id){

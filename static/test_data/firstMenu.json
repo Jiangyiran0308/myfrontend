@@ -128,7 +128,7 @@
         "id": "10",
         "parentMenuId": 0,
         "name": "系统管理",
-        "iconClass": "ji-iconfont-repairfill",
+        "iconClass": "ji-iconfont-newsfill",
         "iconSize": "22px",
         "itemClass": "menuColor",
         "value": "/my.j.blog/system"

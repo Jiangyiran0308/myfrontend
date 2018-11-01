@@ -11,6 +11,7 @@
     /*box-shadow:0 0 3px #ccc;*/
     overflow:hidden;
     float: left;
+    cursor:pointer;
   }
 </style>
 <template>
@@ -19,7 +20,7 @@
         <!--头像圆形显示-->
         <img :src="headPortrait" style="width: auto;height: auto;max-width: 100%;max-height: 100%"/>
       </div>
-      <div style="height:50px;color: #FFFFFF;float: left;line-height: 50px;margin-left: 15px;margin-right: 15px">
+      <div style="height:50px;color: #FFFFFF;float: left;line-height: 50px;margin-left: 15px;margin-right: 15px;cursor:pointer;">
         <span @click="clickUserName">{{userName}}</span>
         <el-dropdown v-if="loginflag">
           <span class="el-dropdown-link">
