@@ -127,6 +127,7 @@
                 }
               ],
               activeIndex:'1',
+              firstMenuUrl:{},
 
             }
         },
@@ -143,7 +144,6 @@
               let data = xhr.body.data ;
               if(data.child.length > 0){
                 vm.menuData = data.child;
-                // vm.nowMenu = vm.menuData[0].entity.id ;
                 vm.clickMenu(vm.menuData[0].entity,0)
               }
             })
@@ -152,11 +152,13 @@
             let vm = this ;
             let id = entity.id ;
             vm.nowMenu = id;
-            vm.$http.get('/api/secondMenu').then(function (xhr) {
-              // console.log(xhr.body.data) ;
-              let data = xhr.body.data ;
-              vm.secondMenuData = data.child ;
-            })
+
+            let url = vm.menuData[index].entity.value ;
+            vm.$router.push({path:url});
+
+            let data = vm.menuData[index].child
+            console.log(data);
+            vm.secondMenuData = data ;
           },
           selectMenuDivColor(id){
             let vm = this ;

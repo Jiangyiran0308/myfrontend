@@ -78,3 +78,26 @@
 .el-select .el-input {
   width: 100px;
 }
+/*单选框*/
+.el-radio__input.is-checked .el-radio__inner {
+
+  border-color: #245B90;
+  background: #245B90;
+
+}
+.el-radio__input.is-checked + .el-radio__label {
+
+  color: #245B90;
+
+}
+/*输入框 input*/
+.el-input.is-active .el-input__inner, .el-input__inner:focus {
+
+  border-color: #245B90;
+  outline: 0;
+
+}
+/*tag标签*/
+.el-tag {
+  border-radius: 12px;
+}

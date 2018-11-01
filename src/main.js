@@ -10,6 +10,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 
 import './assets/icon/iconfont.css';
 import '../static/css/el_style.css'
+import '../static/css/frame.css'
 
 Vue.use(VueResource)
 

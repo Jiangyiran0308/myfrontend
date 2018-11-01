@@ -19,6 +19,7 @@ const app = express()
 var appData = require('../static/test_data/firstMenu.json')
 var secondMenu = require('../static/test_data/secondMenu.json')
 var userInfo = require('../static/test_data/UserInfo.json')
+var fireTag = require('../static/test_data/fireTag.json')
 var apiRoutes = express.Router()
 app.use('/api', apiRoutes)
 //**************
@@ -71,6 +72,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         res.json({
           errno: 0,
           data: userInfo
+        })
+      })
+      app.get('/api/fireTag', (req, res) => {
+        res.json({
+          errno: 0,
+          data: fireTag
         })
       })
     }

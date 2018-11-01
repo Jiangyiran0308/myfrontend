@@ -41,8 +41,6 @@
 </template>
 
 <script>
-  import 'element-ui'
-
     export default {
         name: "user-home",
         components: {},
