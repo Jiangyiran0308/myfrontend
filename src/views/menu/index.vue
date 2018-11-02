@@ -161,7 +161,7 @@
             let url = vm.menuData[index].entity.value ;
             vm.$router.push({path:url});
 
-            let data = vm.menuData[index].child
+            let data = vm.menuData[index].child;
             // console.log(data);
             vm.secondMenuData = data ;
           },

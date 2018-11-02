@@ -17,9 +17,10 @@ const PORT = process.env.PORT && Number(process.env.PORT)
 const express = require('express')
 const app = express()
 var appData = require('../static/test_data/firstMenu.json')
-var secondMenu = require('../static/test_data/secondMenu.json')
+var attention = require('../static/test_data/attentionList.json')
 var userInfo = require('../static/test_data/UserInfo.json')
 var fireTag = require('../static/test_data/fireTag.json')
+var homeList = require('../static/test_data/homeList.json')
 var apiRoutes = express.Router()
 app.use('/api', apiRoutes)
 //**************
@@ -54,7 +55,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     watchOptions: {
       poll: config.dev.poll,
     },
-    //load test data
+    //load test api
     before(app) {
       app.get('/api/firstMenu', (req, res) => {
         res.json({
@@ -62,10 +63,10 @@ const devWebpackConfig = merge(baseWebpackConfig, {
           data: appData
         })
       })
-      app.get('/api/secondMenu', (req, res) => {
+      app.get('/api/attentionList', (req, res) => {
         res.json({
           errno: 0,
-          data: secondMenu
+          data: attention
         })
       })
       app.get('/api/userInfo', (req, res) => {
@@ -78,6 +79,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         res.json({
           errno: 0,
           data: fireTag
+        })
+      })
+      app.get('/api/homeList', (req, res) => {
+        res.json({
+          errno: 0,
+          data: homeList
         })
       })
     }

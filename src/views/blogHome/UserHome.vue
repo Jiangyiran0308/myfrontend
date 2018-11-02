@@ -1,31 +1,16 @@
 <style scoped>
-  .essay_frame{
-    border: 1px solid #9F9F9F;
-    border-radius: 15px;
-    padding: 16px;
-    margin: 30px;
-    height: 120px;
-    min-width: 700px;
-    box-shadow:5px 5px  10px 2px #C7C7C7;
-  }
 </style>
 <template>
     <div  style="height: 98%;margin-top: 5px;margin-bottom: 5px">
-      <!--<div v-for="item in essaydata" class="essay_frame">-->
-        <!--<span>{{item.title}}</span><br/>-->
-        <!--<span>发表日期：{{format(item.date,"yyyy-MM-dd hh:mm")}}</span>-->
-        <!--<span style="margin-left: 50px">作者：{{item.author}}</span><br/>-->
-        <!--<span v-for="item1 in item.tag">{{item1}},</span><br/>-->
-        <!--<div style="height:35px">-->
-          <!--<span>{{item.data}}</span>-->
-        <!--</div>-->
-        <!--<div>-->
-          <!--<span class="Jiconfont ji-iconfont-favor_light" style="font-size: 25px ; float: right"></span>-->
-          <!--<span class="Jiconfont ji-iconfont-appreciate_light" style="font-size: 25px ; float: right;margin-right: 10px;"></span>-->
-          <!--<span class="Jiconfont ji-iconfont-comment_light" style="font-size: 25px ; float: right;margin-right: 10px"></span>-->
-        <!--</div>-->
-      <!--</div>-->
-      <content-show :contenData="essaydata"/>
+      <div style="margin-left: 30px;margin-right: 30px">
+        <span style="color: #245B90;font-size: 20px;font-weight: bolder;font-family: 微软雅黑">
+            推荐
+            <span class="ji-iconfont-formfill" style="font-size: 25px"></span>
+          </span>
+        <hr color="#D0D0D0"/>
+      </div>
+      <content-show :contentData="essaydata" />
+
       <div style="margin-top: 32px;margin-bottom: 32px;text-align: center;">
         <el-pagination
           @size-change="handleSizeChange"
@@ -46,7 +31,6 @@
     export default {
         name: "user-home",
         components: {
-          ContentShow,
           'content-show':ContentShow
         },
         data() {
@@ -99,6 +83,7 @@
             vm.pagestar = 1 ;
             vm.pagenum = vm.testAlldata.length;
             vm.essaydata = vm.testAlldata.slice(vm.pagestar*vm.pagelength-vm.pagelength,vm.pagestar*vm.pagelength);
+
           },
           format(date,fmt) { //author: meizz
             var o = {

@@ -22,7 +22,7 @@
         props: {
           menuData:{
             type:Array,
-            default:[]
+            default:() => []
           }
         },
         components: {
