@@ -49,7 +49,7 @@
         <el-input v-model="inputAccount" placeholder="请输入用户名或邮箱" style="margin-top: 10px;margin-bottom: 10px"></el-input><br>
         <span style="font-size: 16px;color: #9B9B9B">密&nbsp;&nbsp;&nbsp;码：</span>
         <el-input v-model="inputPassword" placeholder="请输入密码" style="margin-top: 10px;margin-bottom: 10px"></el-input>
-        <span style="color: #1b88ed;font-size: 10px">
+        <span style="color: #1b88ed;font-size: 10px;cursor:pointer" @click="signin">
           没有账号？去注册
           <span class="ji-iconfont-right" style="font-size: 10px"></span>
         </span>
@@ -63,7 +63,7 @@
 </template>
 
 <script>
-    import defaultPic from '../../assets/picture/defaulthead.png'
+    import defaultPic from '../../../assets/picture/defaulthead.png'
     export default {
         name: "user-info",
         props: {},
@@ -128,6 +128,9 @@
             setTimeout(() => {
               loading.close();
             }, 3000);
+          },
+          signin(){
+
           }
         }
 

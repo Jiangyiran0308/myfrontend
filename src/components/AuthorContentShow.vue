@@ -1,11 +1,11 @@
 <style scoped>
  .attentionlistClass{
    position: relative;
-   float: left;
-   margin: 10px;
+   /*float: left;*/
+   margin: 5px;
    padding: 5px;
    height: 300px;
-   width: 930px;
+   width: 450px;
    border: 1px solid #FFFFFF;
    box-shadow:0 0  8px 2px #C7C7C7;
  }
@@ -58,7 +58,7 @@
   }
 </style>
 <template>
-    <div class="attentionlistClass">
+    <div class="attentionlistClass" :style="{width:showWidth+'px'}">
       <!--关注人信息-->
       <div style="height: 60px">
         <div class="profilDiv" style="margin-left: 10px" @click="clickUser">
@@ -79,7 +79,7 @@
         </div>
       </div>
       <!--文章标题-->
-      <div style="height: 50px;line-height: 50px;font-size: 25px;color: #245B90;overflow:hidden;">
+      <div style="height: 50px;line-height: 50px;font-size: 20px;color: #245B90;overflow:hidden;">
         <span style="margin-left: 10px;cursor:pointer;" @click="clickTitle">{{briefData.title}}</span>
       </div>
       <!--文章标签-->
@@ -120,6 +120,12 @@
                 createTime:'2000-01-01 00:00:00',
                 content:'null'
               }
+            }
+          },
+          showWidth:{
+            type:Number,
+            default:function () {
+              return 450
             }
           }
         },

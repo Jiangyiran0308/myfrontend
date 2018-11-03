@@ -16,13 +16,13 @@
     height: 100%;
     width: 140px;
     color: #444444;
-    background: #CDCDCD;
+    background: #D6D6D6;
   }
   .menuColor{
     height: 50px;
     line-height: 50px;
     color: #444444;
-    background-color: #CDCDCD;
+    background-color: #D6D6D6;
     padding-left: 18px;
     cursor:pointer;
   }
@@ -58,7 +58,7 @@
         <img :src="logoUrl"/>
       </div>
       <!--二级，三级++菜单-->
-      <div class="secondMenuFrame">
+      <div class="secondMenuFrame" :style="{marginLeft:(screenWidth-1000)/2-130+'px'}">
         <el-menu
           :default-active="activeIndex"
           background-color="#444444"
@@ -90,8 +90,6 @@
           </el-scrollbar>
         </div>
 
-        <!--<div style="float: left;margin-left: 10px;height: 300px;width: 140px"></div>-->
-
       </div>
     </div>
   </div>
@@ -100,7 +98,7 @@
 <script>
   import 'element-ui'
   import SecondMenu from './SecondMenu'
-  import img_logo from '../../../static/logo.png'
+  import img_logo from '../../../../static/logo.png'
   import UserInfo from '../userInfo/UserInfo'
 
     export default {
@@ -113,6 +111,9 @@
         },
         data() {
             return {
+              //窗口宽度
+              screenWidth:document.body.clientWidth,
+
               topFrame:"topFrame",
               topFrame2:"topFrame2",
               leftFrame:"leftFrame",
@@ -136,10 +137,25 @@
 
             }
         },
+        watch:{
+            'screenWidth' : function(val){
+                console.log(val);
+              },
+        },
         mounted() {
           let vm = this ;
           vm.logoUrl = img_logo;
           vm.loadItem() ;
+
+          //开启窗口监听事件
+          // const that = this ;
+          // window.onresize = function () {
+          //   return function () {
+          //     window.screenWidth = document.body.clientWidth ;
+          //     that.screenWidth = window.screenWidth ;
+          //   }
+          // };
+
         },
         methods: {
           loadItem(){

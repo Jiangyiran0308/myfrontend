@@ -12,7 +12,7 @@
     height: 30px;
     color: #245B90;
     line-height: 30px;
-    font-size: 22px;
+    font-size: 18px;
     overflow:hidden;
     cursor:pointer;
   }
