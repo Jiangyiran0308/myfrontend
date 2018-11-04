@@ -7,7 +7,8 @@
         <span style="color: rgba(0,85,179,0.4);font-size: 20px;font-weight: bolder;font-family: 微软雅黑">
             全部文章
             <span class="ji-iconfont-formfill" style="font-size: 25px"></span>
-          </span>
+        </span>
+        <!--<span style="float: right; font-size: 10px;color:#2D64B3 ;line-height: 35px;cursor: pointer">批量处理</span>-->
         <hr color="#D0D0D0"/>
       </div>
       <div id="BlogView">

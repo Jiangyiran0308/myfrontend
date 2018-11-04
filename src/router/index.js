@@ -7,8 +7,6 @@ import BlogContent from '../views/BlogApp/blogContent/BlogView'
 import BlogWrite from '../views/BlogApp/blogWrite/WriteView'
 import Drafts from '../views/BlogApp/drafts/DraftsView'
 import AccountSetting from '../views/BlogApp/accountSetting/AccountSettingView'
-import AccountMessage from '../views/BlogApp/accountMessage/MessageView'
-import OthersNote from '../views/BlogApp/othersNote/NoteView'
 import Collection from '../views/BlogApp/collection/CollectionView'
 import SysManage from '../views/BlogApp/sysManage/SysManage'
 
@@ -58,16 +56,6 @@ export default new Router({
           path:'drafts',
           name:'drafts',
           component:Drafts,
-        },
-        {
-          path:'message',
-          name:'message',
-          component:AccountMessage,
-        },
-        {
-          path:'note',
-          name:'note',
-          component:OthersNote,
         },
         {
           path:'collection',

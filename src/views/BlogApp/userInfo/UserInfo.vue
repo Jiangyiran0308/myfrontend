@@ -27,6 +27,9 @@
             <i class="el-icon-arrow-down el-icon--right" style="color: #ffffff"></i>
           </span>
           <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item @click.native="clickUserMsg">
+              <span class="ji-iconfont-message" style="font-size: 15px;margin-right: 8px"></span>消息
+            </el-dropdown-item>
             <el-dropdown-item @click.native="clickUserSettting">
               <span class="ji-iconfont-settings" style="font-size: 15px;margin-right: 8px"></span>设置
             </el-dropdown-item>
@@ -108,6 +111,9 @@
             else if(vm.loginflag === true){
               console.log("跳转到账户设置页面")
             }
+          },
+          clickUserMsg(val){
+
           },
           clickUserSettting(val){
             console.log(val);

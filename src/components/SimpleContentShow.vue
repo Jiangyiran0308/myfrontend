@@ -21,6 +21,7 @@
     line-height: 35px;
     border-radius: 4px;
     min-height: 35px;
+
     /*cursor: pointer;*/
     /*overflow: hidden;*/
   }
@@ -30,9 +31,10 @@
       <el-row>
         <el-col :span="24">
           <div class="grid-content bg-purple-light">
-            <div style="float: left;margin-left: 20px;max-width: 850px;overflow: hidden;cursor: pointer;" @click="readBlog">
-              {{simpleData.title}}
+            <div style="float: left;margin-left: 20px;width: 650px;overflow: hidden" @click="readBlog">
+              <span style="cursor: pointer">{{simpleData.title}}</span>
             </div>
+            <span style="font-size: 12px;color: #9D9D9D">{{simpleData.createTime}}</span>
             <div style="float: right;margin-right: 20px">
               <el-tooltip class="item" effect="dark" content="详情" placement="top-end">
                 <span class="ji-iconfont-attentionfill" style="font-size: 18px" @click="readBlog"></span>

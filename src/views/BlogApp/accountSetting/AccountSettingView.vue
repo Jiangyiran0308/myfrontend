@@ -3,15 +3,16 @@
 </style>
 <template>
     <div>
-        setting
+        <user-home/>
     </div>
 </template>
 
 <script>
+  import UserHome from '../../../components/UserHome'
     export default {
         name: "account-setting-view",
         props: {},
-        components: {},
+        components: {UserHome},
         data() {
             return {}
         },

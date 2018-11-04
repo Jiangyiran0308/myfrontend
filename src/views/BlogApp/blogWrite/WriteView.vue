@@ -4,17 +4,21 @@
 <template>
     <div>
       <div>
-        <write-blog-u-editor/>
+        <!--<write-blog-u-editor/>-->
+        <write-blog/>
       </div>
     </div>
 </template>
 
 <script>
   import WriteBlogUEditor from '../../../components/WriteBlogUEditor'
+  import WriteBlog from '../../../components/WriteBlog'
     export default {
         name: "write-view",
         props: {},
-        components: {WriteBlogUEditor},
+        components: {
+          WriteBlog,
+          WriteBlogUEditor},
         data() {
             return {}
         },

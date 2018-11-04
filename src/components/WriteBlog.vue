@@ -12,15 +12,15 @@
 </style>
 <template>
   <!--富文本编辑器-->
-    <div class="essay_frame">
-      <el-form ref="form" label-width="60px" size="small" v-model="blogData">
-        <el-form-item label="原创:" required>
+    <div class="essay_frame" id="WriteBlog">
+      <el-form ref="form" :rules="rules" label-width="60px" size="small" v-model="blogData">
+        <el-form-item label="原创:">
           <el-switch v-model="blogData.createFlag"/>
         </el-form-item>
-        <el-form-item v-if="!blogData.createFlag" label="来源:" required>
+        <el-form-item v-if="!blogData.createFlag" prop="blogFrom" label="来源:">
           <el-input v-model="blogData.blogFrom"/>
         </el-form-item>
-        <el-form-item label="标题:" required >
+        <el-form-item label="标题:" prop="blogTitle">
           <el-input v-model="blogData.blogTitle"/>
         </el-form-item>
         <el-form-item label="标签:">
@@ -88,6 +88,16 @@
                 blogContent: '',
                 editorOption: {}
               },
+              rules:{
+                // blogTitle:[
+                //   { required: true,message:'请输入标题', trigger: 'blur'},
+                //   { min: 1, max: 50, message: '长度在 0 到 50 个字符', trigger: 'blur'}
+                // ],
+                // blogFrom:[
+                //   { required:true,message:'请输入来源', trigger: 'blur'},
+                //   { min: 1, max: 50, message: '长度在 0 到 50 个字符', trigger: 'blur'}
+                // ]
+              }
             }
         },
         mounted() {
@@ -103,6 +113,25 @@
           showBlog(){
             let vm =this ;
             $("#BlogShow").html(vm.blogData.blogContent);
+
+            if(!vm.blogData.blogTitle.length>0){
+              vm.$message({
+                showClose:true,
+                type: 'warning',
+                message: '标题不能为空！'
+              });
+              return ;
+            }
+
+            if(!vm.blogData.blogContent.length>0){
+              vm.$message({
+                showClose:true,
+                type: 'warning',
+                message: '内容不能为空！'
+              });
+              return ;
+            }
+
             //首次预览加载2s
             if(vm.firstShowFlag){
               vm.loading1 = this.$loading({
@@ -110,12 +139,12 @@
                 text: '正在加载',
                 // spinner: 'el-icon-loading',
                 background: 'rgba(255, 255, 255, 0.2)',
-                target: document.querySelector('essay_frame'),
+                target: document.querySelector('#WriteBlog'),
               });
-
               setTimeout(()=>{
                 vm.loading1.close();
                 vm.showWindowflag = true ;
+                vm.firstShowFlag = false ;
               },2000)
             }else{
               vm.showWindowflag = true ;

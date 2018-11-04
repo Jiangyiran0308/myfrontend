@@ -27,8 +27,8 @@
         <el-input v-model="blogData.blogTagInput" readonly/>
       </el-form-item>
       <!--内容编辑区-->
-      <div style="height: 330px;overflow: auto">
-        <div id="editor" type="text/plain"></div>
+      <div style="height: 330px">
+        <script id="editor" type="text/plain"></script>
       </div>
       <!--提交，预览区 -->
       <div style="float: left">
@@ -74,7 +74,10 @@
         data() {
             return {
               editor: null,
-              config: {},
+              config: {
+                initialFrameHeight: 200,
+                initialFrameWeight: 100
+              },
               defaultMsg:"请驶入内容",
               showWindowflag:false,
               firstShowFlag:true,
@@ -91,11 +94,11 @@
         },
         mounted() {
           const vm = this ;
-          vm.editor = UE.getEditor('editor').render('editor');
+          vm.editor = UE.getEditor('editor',vm.config).render('editor');
         },
         methods: {
           getUEContent(){
-            return this.editor.getContent();
+            // return this.editor.getContent();
           },
           showBlog(){
             let vm =this ;

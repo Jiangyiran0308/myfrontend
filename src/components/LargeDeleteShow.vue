@@ -3,22 +3,24 @@
 </style>
 <template>
     <div>
-      note
+
     </div>
 </template>
 
 <script>
     export default {
-        name: "note-view",
-        props: {},
+        name: "large-delete-show",
+        props: {
+
+        },
         components: {},
         data() {
-            return {
-            }
+            return {}
         },
         mounted() {
 
         },
-        methods: {},
+        methods: {}
+
     }
 </script>
