@@ -216,7 +216,7 @@
         "id": "8",
         "parentMenuId": 0,
         "name": "个人中心",
-        "iconClass": "ji-iconfont-repairfill",
+        "iconClass": "ji-iconfont-peoplefill",
         "iconSize": "22px",
         "itemClass": "menuColor",
         "value": "/my.j.blog/setting"

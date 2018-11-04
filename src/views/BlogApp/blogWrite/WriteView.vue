@@ -3,15 +3,18 @@
 </style>
 <template>
     <div>
-        write
+      <div>
+        <write-blog-u-editor/>
+      </div>
     </div>
 </template>
 
 <script>
+  import WriteBlogUEditor from '../../../components/WriteBlogUEditor'
     export default {
         name: "write-view",
         props: {},
-        components: {},
+        components: {WriteBlogUEditor},
         data() {
             return {}
         },

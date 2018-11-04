@@ -3,7 +3,7 @@
 </style>
 <template>
     <div>
-        note
+      note
     </div>
 </template>
 
@@ -13,9 +13,11 @@
         props: {},
         components: {},
         data() {
-            return {}
+            return {
+            }
         },
         mounted() {
+
         },
         methods: {},
     }
