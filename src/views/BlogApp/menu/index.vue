@@ -190,9 +190,9 @@
             }
           },
           clickMenu2(index){
-            let vm = this ;
-            vm.activeIndex = index ;
-            console.log(index);
+            // let vm = this ;
+            // vm.activeIndex = index ;
+            // console.log(index);
           }
         },
     }

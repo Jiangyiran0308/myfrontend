@@ -3,7 +3,7 @@
 </style>
 <template>
     <div>
-        <div style="float: left;width: 110px" v-for="item in menuData">
+        <div style="float: left;width: 110px;text-align: center" v-for="item in menuData">
           <el-menu-item v-if="(item.child.length===0||item.child==null)&&item.entity" :index="item.entity.id" @click="handleSelect(item)">
             {{item.entity.name}}
           </el-menu-item>
@@ -37,8 +37,8 @@
         methods: {
           handleSelect(val){
             let vm = this ;
-            // console.log(val);
-            // vm.activeIndex = val ;
+            let url = val.entity.value;
+            vm.$router.push({path:url});
           }
         }
 

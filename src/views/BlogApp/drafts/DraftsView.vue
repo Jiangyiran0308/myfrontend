@@ -21,27 +21,21 @@
         <hr color="#D0D0D0"/>
       </div>
       <div id="DraftsView" style="margin: 30px">
-        <el-checkbox-group v-model="checkData">
-          <div v-for="item in myBlogData" class="deleteFrame">
-            <el-checkbox :label="item.title" style="float: left ;margin-left: 10px "/>
-            <span style="width: 600px">{{item.createTime}}</span>
-            <!--<span>{{item.createTime}}</span>-->
-          </div>
-        </el-checkbox-group>
+        <large-delete-show :blogData="blogData"/>
       </div>
     </div>
 </template>
 
 <script>
-  import SimpleContentShow from '../../../components/SimpleContentShow'
+  import LargeDeleteShow from '../../../components/LargeDeleteShow'
     export default {
         name: "drafts-view",
         props: {},
-        components: {SimpleContentShow},
+        components: {LargeDeleteShow},
         data() {
             return {
               loading1:'',
-              myBlogData:[],
+              blogData:[],
               checkData:[],
             }
         },
@@ -63,11 +57,11 @@
           },
           init_1(){
             let vm = this ;
-            vm.$http.get('/api/attentionList').then(function (xhr) {
+            vm.$http.get('/api/homeList').then(function (xhr) {
               let data = xhr.body.data ;
               if(data){
                 if(data.data.length>0) {
-                  vm.myBlogData = data.data;
+                  vm.blogData = data.data;
                   // vm.loading1.close();
                 }
               }

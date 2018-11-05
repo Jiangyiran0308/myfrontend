@@ -109,7 +109,8 @@
               vm.loginWindowflag = true ;
             }
             else if(vm.loginflag === true){
-              console.log("跳转到账户设置页面")
+              let vm = this ;
+              vm.$router.push({path:'/my.j.blog/setting/editData'});
             }
           },
           clickUserMsg(val){

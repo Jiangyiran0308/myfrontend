@@ -181,7 +181,7 @@
             "iconClass": "ji-iconfont-repairfill",
             "iconSize": "22px",
             "itemClass": "menuColor",
-            "value": "/my.j.blog/setting"
+            "value": "/my.j.blog/setting/editData"
           },
           "child":[]
         },
@@ -193,7 +193,7 @@
             "iconClass": "ji-iconfont-repairfill",
             "iconSize": "22px",
             "itemClass": "menuColor",
-            "value": "/my.j.blog/setting"
+            "value": "/my.j.blog/setting/usersAttentionList"
           },
           "child":[]
         },
@@ -205,7 +205,7 @@
             "iconClass": "ji-iconfont-repairfill",
             "iconSize": "22px",
             "itemClass": "menuColor",
-            "value": "/my.j.blog/setting"
+            "value": "/my.j.blog/setting/accountMessage"
           },
           "child":[]
         },
@@ -217,7 +217,7 @@
             "iconClass": "ji-iconfont-repairfill",
             "iconSize": "22px",
             "itemClass": "menuColor",
-            "value": "/my.j.blog/setting"
+            "value": "/my.j.blog/setting/othersNote"
           },
           "child":[]
         }
