@@ -14,6 +14,7 @@ import UserAttentionList from '../views/BlogApp/accountSetting/UsersAttentionLis
 import OthersNote from '../views/BlogApp/accountSetting/OthersNote'
 import Collection from '../views/BlogApp/collection/CollectionView'
 import SysManage from '../views/BlogApp/sysManage/SysManage'
+import FullBlogShow from '../views/BlogApp/blogContent/FullBlogView'
 
 Vue.use(Router)
 
@@ -96,7 +97,14 @@ export default new Router({
           path:'system',
           name:'system',
           component:SysManage,
+        },
+
+        {
+          path:'blogShow',
+          name:'blogShow',
+          component:FullBlogShow
         }
+
       ]
     },
   ]

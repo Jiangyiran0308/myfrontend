@@ -62,7 +62,7 @@
               return {
                 id:'',
                 title:'title',
-                author:'author',
+                userName:'author',
                 createTime:'2000-01-01 00:00:00',
                 tagList:['tag'],
                 content:'null',

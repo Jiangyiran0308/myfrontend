@@ -1,4 +1,4 @@
-<style scoped>
+<style>
   .homeFrame{
     margin: 20px;
     padding: 15px;
@@ -40,7 +40,7 @@
     height: 65px;
     width: 770px;
     line-height: 90px;
-    color: #0055B3;
+    color: #00376E;
     font-size: 25px;
     font-family: 方正兰亭超细黑简体;
   }

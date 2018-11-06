@@ -33,7 +33,7 @@
           <el-tag type="info" size="mini">{{item}}</el-tag>
         </label>
       </span>
-      <span style="float: right;color: #00376E">查看全文<span class="ji-iconfont-right" style="font-size: 12px"></span></span>
+      <span style="float: right;color: #00376E;cursor: pointer" @click="fullBlog">查看全文<span class="ji-iconfont-right" style="font-size: 12px"></span></span>
     </div>
     <hr color="#FFFFFF"/>
     <br/>
@@ -94,6 +94,17 @@
           $(id).html(vm.blogData.content);
           // document.getElementById(vm.blogData.contentId.toString()).innerHTML = vm.blogData.content;
         },
-        methods: {},
+        methods: {
+          fullBlog(){
+            let vm = this ;
+            let data = vm.blogData ;
+            this.$router.push({
+              path:'/my.j.blog/blogShow',
+              query:{
+                data:data
+              },
+            })
+          },
+        },
     }
 </script>

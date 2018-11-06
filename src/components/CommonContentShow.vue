@@ -30,7 +30,7 @@
     </div>
     <div class="commonAuthorTime">
       <span>发表日期：<span style="color: #245B90">{{commonData.createTime}}</span></span>
-      <span style="margin-left: 50px">作者：<span style="color: #245B90;cursor: pointer" @click="clickAuthor">{{commonData.author}}</span></span>
+      <span style="margin-left: 50px">作者：<span style="color: #245B90;cursor: pointer" @click="clickAuthor">{{commonData.userName}}</span></span>
     </div>
     <div style="height: 25px;line-height: 25px">
       <label v-for="item in commonData.tagList" style="cursor: pointer" @click="clickTag(item)">
@@ -64,7 +64,7 @@
               return{
                 id:'',
                 title:'title',
-                author:'author',
+                userName:'author',
                 createTime:'2000-01-01 00:00:00',
                 tagList:['tag'],
                 content:'null',

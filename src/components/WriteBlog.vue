@@ -148,6 +148,7 @@
               },2000)
             }else{
               vm.showWindowflag = true ;
+              console.log(vm.blogData.blogContent);
             }
           },
           submitBlog(){

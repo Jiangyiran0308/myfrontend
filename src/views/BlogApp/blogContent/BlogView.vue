@@ -49,7 +49,7 @@
           },
           init_1(){
             let vm = this ;
-            vm.$http.get('/api/attentionList').then(function (xhr) {
+            vm.$http.get('/api/homeList').then(function (xhr) {
               let data = xhr.body.data ;
               if(data){
                 if(data.data.length>0) {

@@ -52,10 +52,10 @@
       "userName":"用户332",
       "userFans":21,
       "userEssay":35,
-      "title":"【Oracle RAC】JDBC连接oracle RAC数据库配置",
+      "title":"Spring MVC 介绍",
       "tagList":["oracle","java"],
       "createTime":"2018-01-08 08:04:32",
-      "content":"生产上线系统，未能及时识别到Oracle数据库是RAC环境，上线时，Druid数据源配置按照单实例数据库配置，导致系统无法建立数据库连接，系统无法启动。",
+      "content":"<p>Spring MVC 是一个模型 - 视图 - 控制器（MVC）的Web框架建立在中央前端控制器servlet（DispatcherServlet），它负责发送每个请求到合适的处理程序，使用视图来最终返回响应结果的概念。Spring MVC 是 Spring 产品组合的一部分，它享有 Spring IoC容器紧密结合Spring松耦合等特点，因此它有Spring的所有优点。</p><h1>SpringMVC架构图所下所示 </h1><pre class='ql-syntax' spellcheck='false'>int i = 0 ;doubel j = 0 ;</pre><p>这个 Spring 4 MVC教程系列是基于 Spring 4.0.6.RELEASE / 4.1.7.RELEASE/4.2.0.RELEASE.</p><p>Spring 4 MVC 实践操作的例子</p><p>在本系列教程中，我们将通过 Spring 4 MVC 使用全面性工作例子来帮助探索它们的共同特征。</p><p>下面这些列出来的是一些比较实用（也归为高级部分）的示例，如果是初学者，可以从左侧目录依次往下学习和实践。</p><p><br></p>",
       "commentNum":0,
       "favorNum":0,
       "collectNum":0
