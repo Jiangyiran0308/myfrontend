@@ -80,19 +80,15 @@
         components: {},
         data() {
             return {
+              loading1:'',
               blogShowData:[],
             }
         },
       watch:{
-        'blogData' : function(val){
-          console.log(val);
-        },
+        "blogData" : "loadContent"
       },
         mounted() {
-          let vm = this ;
-          let id = "#"+vm.blogData.id;
-          $(id).html(vm.blogData.content);
-          // document.getElementById(vm.blogData.contentId.toString()).innerHTML = vm.blogData.content;
+          this.loadContent();
         },
         methods: {
           fullBlog(){
@@ -105,6 +101,12 @@
               },
             })
           },
+          loadContent(){
+            let vm = this ;
+            let id = "#"+vm.blogData.id;
+            $(id).html(vm.blogData.content);
+            // document.getElementById(vm.blogData.contentId.toString()).style.font
+          }
         },
     }
 </script>

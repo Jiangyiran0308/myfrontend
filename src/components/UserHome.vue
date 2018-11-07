@@ -22,7 +22,7 @@
     background-color: rgba(0, 85, 179, 0.11);
     height: 100px;
   }
-  .profilDiv{
+  .profilDiv_big{
     display:inline-block;
     margin:5px auto;
     width:80px;
@@ -58,7 +58,7 @@
 <template>
   <div>
     <div class="homeFrame">
-        <div class="profilDiv" style="margin-left: 10px" @click="clickUser">
+        <div class="profilDiv_big" style="margin-left: 10px" @click="clickUser">
           <!--头像圆形显示-->
           <!--<img v-if="briefData.userPic!==''&&briefData.userPic.length>0" :src="briefData.userPic" style="width: auto;height: auto;max-width: 100%;max-height: 100%"/>-->
           <img  :src="defaultPic" style="width: auto;height: auto;max-width: 100%;max-height: 100%"/>
