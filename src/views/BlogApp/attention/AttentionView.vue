@@ -44,8 +44,8 @@
               lock: true,
               text: '正在加载',
               // spinner: 'el-icon-loading',
-              background: 'rgba(255, 255, 255, 0.2)',
-              target: document.querySelector('#attentionView')
+              background: 'rgba(255, 255, 255, 0.8)',
+              target: document.querySelector('.viewsFrame')
             });
           },
           init_1(){

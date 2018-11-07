@@ -29,11 +29,11 @@
           "entity":{
             "id":"2-1",
             "parentMenuId":"2",
-            "name":"分类",
+            "name":"关注列表",
             "iconClass":"",
             "iconSize":"22px",
             "itemClass":"menuColor",
-            "value":""
+            "value":"/my.j.blog/attention/list"
           },
           "child":[]
         }

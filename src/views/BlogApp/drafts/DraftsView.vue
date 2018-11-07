@@ -47,13 +47,12 @@
         methods: {
           loadingShow(){
             let vm = this ;
-            // vm.loading1 = this.$loading({
-            //   lock: true,
-            //   text: '正在加载',
-            //   // spinner: 'el-icon-loading',
-            //   background: 'rgba(255, 255, 255, 0.2)',
-            //   target: document.querySelector('#BlogView')
-            // });
+            vm.loading1 = this.$loading({
+              lock: true,
+              text: '正在加载',
+              background: 'rgba(255, 255, 255, 0.8)',
+              target: document.querySelector('.viewsFrame')
+            });
           },
           init_1(){
             let vm = this ;
@@ -62,7 +61,7 @@
               if(data){
                 if(data.data.length>0) {
                   vm.blogData = data.data;
-                  // vm.loading1.close();
+                  vm.loading1.close();
                 }
               }
             })

@@ -58,7 +58,7 @@
 <template>
   <div>
     <div class="homeFrame">
-        <div class="profilDiv_big" style="margin-left: 10px" @click="clickUser">
+      <div class="profilDiv_big" style="margin-left: 10px" @click="clickUser">
           <!--头像圆形显示-->
           <!--<img v-if="briefData.userPic!==''&&briefData.userPic.length>0" :src="briefData.userPic" style="width: auto;height: auto;max-width: 100%;max-height: 100%"/>-->
           <img  :src="defaultPic" style="width: auto;height: auto;max-width: 100%;max-height: 100%"/>
@@ -81,7 +81,7 @@
       </label>
     </div>
     <div class="otherFrame">
-
+      分类
     </div>
   </div>
 </template>
@@ -95,12 +95,15 @@
         components: {ContentShow},
         data() {
             return {
+              loading1:'',
               defaultPic:defaultPic,
               blogDataList:[],
             }
         },
         mounted() {
+          this.loading();
           this.init_1();
+
         },
         methods: {
           init_1(){
@@ -110,9 +113,19 @@
               if(data){
                 if(data.data.length>0){
                   vm.blogDataList = data.data ;
-                  // vm.loading1.close();
+                  vm.loading1.close();
                 }
               }
+            });
+          },
+          loading(){
+            let vm =this ;
+            vm.loading1 = this.$loading({
+              lock: true,
+              text: '正在加载',
+              // spinner: 'el-icon-loading',
+              background: 'rgba(255, 255, 255, 0.8)',
+              target: document.querySelector('.viewsFrame'),
             });
           },
           clickUser(){

@@ -110,7 +110,7 @@
           },
           loadData(){
             let vm = this ;
-            console.log(vm.blogData);
+            // console.log(vm.blogData);
             let id = "#"+vm.blogData.id;
             // $("#content").html(vm.blogData.content);
             document.getElementById("content").innerHTML = vm.blogData.content;

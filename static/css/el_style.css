@@ -101,3 +101,9 @@
 .el-tag {
   border-radius: 12px;
 }
+
+/*面包屑*/
+.el-breadcrumb__inner a:hover, .el-breadcrumb__inner.is-link:hover {
+  color: #CCCCCC;
+  cursor: pointer;
+}

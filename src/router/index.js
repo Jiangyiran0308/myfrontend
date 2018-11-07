@@ -15,6 +15,7 @@ import OthersNote from '../views/BlogApp/accountSetting/OthersNote'
 import Collection from '../views/BlogApp/collection/CollectionView'
 import SysManage from '../views/BlogApp/sysManage/SysManage'
 import FullBlogShow from '../views/BlogApp/blogContent/FullBlogView'
+import AttentionList from '../views/BlogApp/attention/AttentionListView'
 
 Vue.use(Router)
 
@@ -42,6 +43,11 @@ export default new Router({
           path:'attention',
           name:'blogatttion',
           component:BlogAttention,
+        },
+        {
+          path:'attention/list',
+          name:'blogatttion',
+          component:AttentionList,
         },
         {
           path:'content',
