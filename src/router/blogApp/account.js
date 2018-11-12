@@ -7,12 +7,12 @@ const userattention = resolve => {require(['../../views/BlogApp/accountSetting/U
 
 console.log("11111111111111111");
 const list = [
-  {path:'/setting',name:'setting',component:accountSetting},
-  {path:'/setting/editData',name:'editData',component:editaccountdata},
-  {path:'/setting/editHeadProfile',name:'editHeadProfile',component:editHeadProfile},
-  {path:'/setting/usersAttentionList',component:userattention},
-  {path:'/setting/othersNote',component:othersnote},
-  {path:'/setting/accountMessage',component:accountmessage},
+  {path:'setting',name:'setting',component:accountSetting},
+  {path:'setting/editData',name:'editData',component:editaccountdata},
+  {path:'setting/editHeadProfile',name:'editHeadProfile',component:editHeadProfile},
+  {path:'setting/usersAttentionList',component:userattention},
+  {path:'setting/othersNote',component:othersnote},
+  {path:'setting/accountMessage',component:accountmessage},
 ];
 
 export default list // 给当前模块使用

@@ -86,7 +86,7 @@
             }
         },
         mounted() {
-          this.getUserInfo();
+          // this.getUserInfo();
         },
         methods: {
           getUserInfo(){

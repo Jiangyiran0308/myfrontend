@@ -145,7 +145,7 @@
         mounted() {
           let vm = this ;
           vm.logoUrl = img_logo;
-          vm.loadItem() ;
+          // vm.loadItem() ;
 
           //开启窗口监听事件
           // const that = this ;
