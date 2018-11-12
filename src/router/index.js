@@ -17,101 +17,104 @@ import SysManage from '../views/BlogApp/sysManage/SysManage'
 import FullBlogShow from '../views/BlogApp/blogContent/FullBlogView'
 import AttentionList from '../views/BlogApp/attention/AttentionListView'
 
+import blog_router_list from './blogApp/blogapp'
+
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      redirect:'/my.j.blog/'
-    },
-    {
-      path:'/my.j.blog',
-      name:'appframe',
-      component:  Index,
-      children:[
-        {
-          path: '',
-          redirect: '/my.j.blog/home'
-        },
-        {
-          path:'home',
-          name:'bloghome',
-          component:BlogHome,
-        },
-        {
-          path:'attention',
-          name:'blogatttion',
-          component:BlogAttention,
-        },
-        {
-          path:'attention/list',
-          name:'blogatttion',
-          component:AttentionList,
-        },
-        {
-          path:'content',
-          name:'content',
-          component:BlogContent,
-        },
-        {
-          path:'write',
-          name:'write',
-          component:BlogWrite,
-        },
-        {
-          path:'setting',
-          name:'setting',
-          component:AccountSetting,
-        },
-        {
-          path:'setting/editData',
-          name:'editData',
-          component:EditAccountData
-        },
-        {
-          path:'setting/editHeadProfile',
-          name:'editHeadProfile',
-          component:EditHeadProfile
-        },
-        {
-          path:'setting/accountMessage',
-          name:'accountMessage',
-          component:AccountMessage
-        },
-        {
-          path:'setting/usersAttentionList',
-          name:'usersAttentionList',
-          component:UserAttentionList
-        },
-        {
-          path:'setting/othersNote',
-          name:'othersNote',
-          component:OthersNote
-        },
-        {
-          path:'drafts',
-          name:'drafts',
-          component:Drafts,
-        },
-        {
-          path:'collection',
-          name:'collection',
-          component:Collection,
-        },
-        {
-          path:'system',
-          name:'system',
-          component:SysManage,
-        },
-
-        {
-          path:'blogShow',
-          name:'blogShow',
-          component:FullBlogShow
-        }
-
-      ]
-    },
-  ]
+  routes: blog_router_list,
+    // [
+    // {
+    //   path: '/',
+    //   redirect:'/my.j.blog/'
+    // },
+    // {
+    //   path:'/my.j.blog',
+    //   name:'appframe',
+    //   component:  Index,
+    //   children:[
+    //     {
+    //       path: '',
+    //       redirect: '/my.j.blog/home'
+    //     },
+    //     {
+    //       path:'home',
+    //       name:'bloghome',
+    //       component:BlogHome,
+    //     },
+    //     {
+    //       path:'attention',
+    //       name:'blogatttion',
+    //       component:BlogAttention,
+    //     },
+    //     {
+    //       path:'attention/list',
+    //       name:'blogatttion',
+    //       component:AttentionList,
+    //     },
+    //     {
+    //       path:'content',
+    //       name:'content',
+    //       component:BlogContent,
+    //     },
+    //     {
+    //       path:'write',
+    //       name:'write',
+    //       component:BlogWrite,
+    //     },
+    //     {
+    //       path:'setting',
+    //       name:'setting',
+    //       component:AccountSetting,
+    //     },
+    //     {
+    //       path:'setting/editData',
+    //       name:'editData',
+    //       component:EditAccountData
+    //     },
+    //     {
+    //       path:'setting/editHeadProfile',
+    //       name:'editHeadProfile',
+    //       component:EditHeadProfile
+    //     },
+    //     {
+    //       path:'setting/accountMessage',
+    //       name:'accountMessage',
+    //       component:AccountMessage
+    //     },
+    //     {
+    //       path:'setting/usersAttentionList',
+    //       name:'usersAttentionList',
+    //       component:UserAttentionList
+    //     },
+    //     {
+    //       path:'setting/othersNote',
+    //       name:'othersNote',
+    //       component:OthersNote
+    //     },
+    //     {
+    //       path:'drafts',
+    //       name:'drafts',
+    //       component:Drafts,
+    //     },
+    //     {
+    //       path:'collection',
+    //       name:'collection',
+    //       component:Collection,
+    //     },
+    //     {
+    //       path:'system',
+    //       name:'system',
+    //       component:SysManage,
+    //     },
+    //
+    //     {
+    //       path:'blogShow',
+    //       name:'blogShow',
+    //       component:FullBlogShow
+    //     }
+    //
+    //   ]
+    // },
+  // ]
 })
