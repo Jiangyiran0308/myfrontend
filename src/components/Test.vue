@@ -22,9 +22,24 @@
     },
     mounted() {
       let vm = this ;
-      this.$http.get('http://localhost:8080/data').then(function (xhr) {
-        console.log(xhr);
-      })
+      // this.$http.get(this.hytGlobal.parent_url+'/data').then(function (xhr) {
+      //   console.log(xhr);
+      // })
+      var user = new URLSearchParams();
+      user.append("user","jiangyiran");
+
+      let uu = {
+        username:"jiangyiran",
+        password:"123456"
+      };
+
+      this.$axios.post('/data',uu)
+        .then(function (response) {
+          console.log(response.data);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     },
     methods: {},
   }

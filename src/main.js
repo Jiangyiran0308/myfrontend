@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import  VueResource  from 'vue-resource';
+import store from './store/index'
+import axiosPlugin from './server'
 
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
@@ -19,12 +21,14 @@ import  VueQuillEditor from 'vue-quill-editor'
 import 'quill/dist/quill.core.css'
 import 'quill/dist/quill.snow.css'
 import 'quill/dist/quill.bubble.css'
-//富文本编辑器1
+//富文本编辑器2
 import '../static/UEditor/ueditor.config.js'
 import '../static/UEditor/ueditor.all.min.js'
 import '../static/UEditor/lang/zh-cn/zh-cn.js'
 import '../static/UEditor/ueditor.parse.min.js'
 
+// Vue.prototype.$axios = axios;
+Vue.use(axiosPlugin);
 Vue.use(VueResource);
 Vue.http.options.emulateJSON = true;
 
@@ -38,6 +42,7 @@ Vue.config.productionTip = false;
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
