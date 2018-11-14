@@ -25,13 +25,14 @@ import '../static/UEditor/ueditor.all.min.js'
 import '../static/UEditor/lang/zh-cn/zh-cn.js'
 import '../static/UEditor/ueditor.parse.min.js'
 
-Vue.use(VueResource)
+Vue.use(VueResource);
+Vue.http.options.emulateJSON = true;
 
 Vue.use(ElementUI);
 
-Vue.use(VueQuillEditor)
+Vue.use(VueQuillEditor);
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({

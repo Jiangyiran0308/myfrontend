@@ -15,16 +15,16 @@ const visitor = resolve => {require(['../../components/Visitor'],resolve)};
 const testview = resolve => {require(['../../components/Test'],resolve)};
 
 const list = [
+  // {
+  //   path: '/',
+  //   redirect:'/my.j.blog/'
+  // },
   {
-    path: '/',
-    redirect:'/my.j.blog/'
-  },
-  {
-    path:'/my.j.blog',
+    path:'/',
     name:'appframe',
     component:  index,
     children:[
-      {path: '', redirect: '/my.j.blog/home'},
+      {path: '', redirect: '/home/'},
       {path:'home',name:'bloghome', component:testview,},
       {path:'login',name:'bloghome', component:visitor,},
       // {path:'home',name:'bloghome', component:bloghome,},
